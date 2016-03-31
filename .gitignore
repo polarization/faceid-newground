@@ -5,3 +5,4 @@ config.py
 test_config.py
 .idea/
 .testrepository
+faceid_newground.egg-info/
