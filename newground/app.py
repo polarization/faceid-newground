@@ -24,6 +24,4 @@ def create_app():
     _app.config.from_object('config')
     configure_foundations(_app)
     configure_blueprint(_app, resources.MODULES)
-
-    create_app = lambda: _app
-    return create_app()
+    return _app

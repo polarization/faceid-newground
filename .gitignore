@@ -1,5 +1,7 @@
 venv
+.tox
 *.pyc
 config.py
+test_config.py
 .idea/
-
+.testrepository
