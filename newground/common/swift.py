@@ -4,7 +4,6 @@ from config import swift_endpoint, FDBInfo_rediskeyname, \
     SwiftAccountInfo_rediskeyname
 import redis_cli as redis
 import json
-import requests
 from swiftclient.exceptions import ClientException
 
 
@@ -29,14 +28,14 @@ def get_conn(fdbname):
     return conn
 
 
-def show_account_detail(conn):
-    try:
-        #get_conn(fdbname).
-        return True
-    except:
-        import traceback
-        traceback.print_exc()
-        return False
+# def show_account_detail(conn):
+#     try:
+#         #get_conn(fdbname).
+#         return True
+#     except:
+#         import traceback
+#         traceback.print_exc()
+#         return False
 
 
 def create_container(conn, container_name):
@@ -65,7 +64,7 @@ def create_object(conn, container_name, sw_file_name, local_file_content):
     """
     try:
         conn.put_object(container_name, sw_file_name,
-                            contents=local_file_content)
+                        contents=local_file_content)
         return True
     except:
         import traceback
@@ -171,7 +170,7 @@ def delete_container(conn, container_name):
 
 if __name__ == '__main__':
     pass
-    #print create_container('leixun')
+    # print create_container('leixun')
     # print create_object('hello.txt', 'leixun', 'hello.txt', 'text/plain')
     # print get_container_names()
     # print get_file_list('leixun')

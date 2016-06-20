@@ -25,7 +25,3 @@ def set_keyvalue(key, value, expire_time=None):
 
 def delete_keys(*keys):
     return redis_cli.delete(*keys)
-
-
-
-

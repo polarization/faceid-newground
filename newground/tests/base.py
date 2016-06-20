@@ -59,7 +59,10 @@ class TestCase(testtools.TestCase):
 
 class ResourcesTestCase(TestCase):
 
+    app = app.create_app()
+    web_client = TestApp(app)
+
     def setUp(self):
         super(ResourcesTestCase, self).setUp()
-        self.app = app.create_app()
-        self.web_client = TestApp(self.app)
+        # self.app = app.create_app()
+        # self.web_client = TestApp(self.app)

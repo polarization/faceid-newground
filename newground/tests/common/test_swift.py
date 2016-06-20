@@ -1,6 +1,5 @@
 # coding=utf-8
 from newground.tests.base import TestCase
-from newground.common import swift
 import os
 
 
@@ -18,7 +17,7 @@ class SampleTestCase(TestCase):
 
     def test_swift_api(self):
         pass
-        #self.assertEqual(True, swift.create_container('leixun'))
+        # self.assertEqual(True, swift.create_container('leixun'))
         # self.assertEqual(True, swift.create_object('hello.txt', 'leixun',
         #                                            'hello.txt',
         #                                            'text/plain'))
